@@ -1,0 +1,111 @@
+.splash-screen-bb {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    overflow: hidden;
+}
+
+.splash-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+.splash-content-bb {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.splash-logo-bb {
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(0, 168, 132, 0.7));
+    border-radius: 10px;
+}
+
+.tube-container {
+    width: 40px;
+    height: 120px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.tube-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+.tube-liquid {
+    width: 100%;
+    background: linear-gradient(to top, #004c6d 0%, #00ccff 100%);
+    z-index: 2;
+    transition: height 0.1s linear;
+    box-shadow: 0 0 15px #00ccff;
+}
+
+.splash-title-bb {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.splash-text-bb {
+    color: #8bab91;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.pulse {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+        filter: drop-shadow(0 0 20px #00a884);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}

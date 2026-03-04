@@ -1,0 +1,142 @@
+.profile-sidebar {
+    width: 100%;
+    height: 100%;
+    background-color: var(--wa-sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.profile-header {
+    height: 60px;
+    background-color: var(--wa-header-bg);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 30px;
+    font-size: 16px;
+    color: var(--wa-text-main);
+    border-bottom: 1px solid var(--wa-border);
+}
+
+.close-btn-container {
+    cursor: pointer;
+    padding: 10px;
+    margin-left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn {
+    color: var(--wa-icon);
+    font-size: 24px;
+    transition: color 0.2s;
+}
+
+.close-btn-container:hover .close-btn {
+    color: #fff;
+}
+
+.profile-title {
+    font-weight: 500;
+}
+
+.profile-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.profile-photo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 20px;
+    background-color: var(--wa-sidebar-bg);
+    border-bottom: 12px solid var(--wa-bg-main);
+}
+
+.profile-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-photo-section h2 {
+    font-size: 20px;
+    color: var(--wa-text-main);
+    font-weight: 400;
+}
+
+.profile-photo-section p {
+    font-size: 14px;
+    color: var(--wa-text-secondary);
+    margin-top: 5px;
+}
+
+.profile-info-section {
+    padding: 14px 30px;
+    background-color: var(--wa-sidebar-bg);
+    border-bottom: 12px solid var(--wa-bg-main);
+}
+
+.info-block {
+    margin: 20px 0;
+}
+
+.info-block label {
+    font-size: 14px;
+    color: var(--wa-primary);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.info-block p {
+    font-size: 16px;
+    color: var(--wa-text-main);
+}
+
+.status-text {
+    color: #4cd964 !important;
+    font-weight: 500;
+}
+
+.profile-actions {
+    padding: 14px 0;
+    background-color: var(--wa-sidebar-bg);
+}
+
+.action-item {
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.action-item:hover {
+    background-color: var(--wa-hover);
+}
+
+.action-item.danger {
+    color: #f15c5c;
+}
+
+.action-item.danger i {
+    color: #f15c5c;
+}
+
+@media (max-width: 768px) {
+    .profile-sidebar {
+        width: 100%;
+    }
+}

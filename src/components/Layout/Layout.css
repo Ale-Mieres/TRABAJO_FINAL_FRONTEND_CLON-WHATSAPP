@@ -1,0 +1,48 @@
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--wa-bg-main);
+    overflow: hidden;
+}
+
+.sidebar-wrapper {
+    flex: 0 0 30%;
+    min-width: 320px;
+    max-width: 450px;
+    border-right: 1px solid var(--wa-border);
+}
+
+.main-content {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    background-color: #0b141a;
+}
+
+@media (max-width: 768px) {
+    .skinny-sidebar {
+        display: none;
+    }
+
+    .sidebar-wrapper {
+        flex: 1;
+        width: 100%;
+        max-width: none;
+        display: block;
+    }
+
+    .main-content {
+        display: none;
+    }
+
+    .app-container.chat-open .sidebar-wrapper {
+        display: none;
+    }
+
+    .app-container.chat-open .main-content {
+        display: flex;
+        flex: 1;
+        width: 100%;
+    }
+}
